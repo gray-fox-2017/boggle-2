@@ -14,8 +14,7 @@ class BoogleBoard {
 
   kamusmanual(){
     let kamus = ['WOI','ASLI','INI','CHALLANGE','RIBET','BANGET','ANJER','UDA','SEHARIAN','KAGA','SOLVE','JUGA','MASA'
-  ,'GW','AMPE','BIKIN','KAMUS','SENDIRI','GARA','GAK','TAU','CARA','SPLIT','SI','DATAJS','AKHIRNYA','SEKARANG','TANGAN','GW'
-  ,'JADI','PEGEL','SENDIRI','NGE','CEK','ULANG','NGAK','ADA','YANG','SOLVE','JUGA']
+  ,'GW','AMPE','BIKIN','KAMUS','SENDIRI','GARA','GAK','TAU','CARA','SPLIT','SI','DATAJS']
     return kamus
   }
   

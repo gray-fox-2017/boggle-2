@@ -28,7 +28,7 @@ class BoogleBoard {
     for (var i = 0; i < this.boggleBoardSize; i++) {
       let temp = [];
       for (var j = 0; j < this.boggleBoardSize; j++) {
-        let generate = this.letters.split('')[Math.floor(Math.random() * 25)]
+        let generate = this.letters.split('')[Math.floor(Math.random() * 26)]
         temp.push(generate);
       }
       board.push(temp);
@@ -45,6 +45,7 @@ class BoogleBoard {
         for (var col = 0; col < this.boggleBoardSize; col++) {
           if (this.boardchoice[row][col] == found[0]) {
             let word = this.checkletter(found.slice(1), found[0], found, [row, col], [[row, col]]);
+            //console.log(word)
             if (word == found) {
               result.push(word);
 
@@ -68,9 +69,6 @@ class BoogleBoard {
   }
 
   checkletter(word, letter, found, position, prevmove) {
-    // console.log(`${kataSekarang}, ${huruf}. ${kataAsli}, ${posisiSekarang}, ${posisiYangDilewati}`);
-    let results;
-
     if (word.length == 0) {
       return letter;
     }
@@ -81,7 +79,7 @@ class BoogleBoard {
       [-1, 1],
       [0, -1],
       [0, 1],
-      [1. - 1],
+      [1. -1],
       [1, 0],
       [1, 1]
     ];

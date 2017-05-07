@@ -69,6 +69,8 @@ class BoogleBoard {
   }
 
   checkletter(word, letter, found, position, prevmove) {
+    let results;
+
     if (word.length == 0) {
       return letter;
     }

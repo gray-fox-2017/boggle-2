@@ -114,7 +114,7 @@ class BoogleBoard {
 
   checkmove(nextmove, prevmove) {
     for (let i = 0; i < prevmove; i++) {
-      if (nextmove[i][0] === prevmove[i][0] && nextmove[i][1] === prevmove[i][1]) {
+      if (nextmove[0] === prevmove[i][0] && nextmove[1] === prevmove[i][1]) {
         return false;
       }
     }

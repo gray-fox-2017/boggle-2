@@ -1,6 +1,5 @@
 "use strict"
-let words = ["TEST", "WORD", "HOPE", "TRUE", "TOP", "HOST", "DED", "TROOPER", "IT"]
-let work = ["TEOWORE"]
+let words = ["TEST", "WORD", "HOPE", "TRUE", "TOP", "HOST", "DED", "TROOPER", "IT"];
 
 class Boggle {
   constructor() {
@@ -10,7 +9,7 @@ class Boggle {
     [['T', 'E', 'S', 'T'],
      ['W', 'O', 'R', 'D'],
      ['H', 'O', 'P', 'E'],
-     ['T', 'R', 'U', 'I']]
+     ['T', 'R', 'U', 'E']]
   }
 
   shake(number) {

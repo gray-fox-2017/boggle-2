@@ -6,10 +6,15 @@ class BoogleBoard {
     this.boggleBoardSize = size
     this.dict = fs.readFileSync('data.js').toString().split('\n')
     this.boggle_board = this.shake()
-    this.testboard = [['W', 'O', 'I', 'R'],
-                      ['B', 'K', 'A', 'G'],
-                      ['S', 'I', 'U', 'A'],
-                      ['A', 'G', 'Z', 'A']];
+    this.boardchoice = this.testboard()
+  }
+
+  testboard(){
+    let test = [['W', 'O', 'I', 'R'],
+                ['B', 'K', 'A', 'G'],
+                ['S', 'I', 'U', 'A'],
+                ['A', 'G', 'Z', 'A']];
+    return test
   }
 
   kamusmanual(){
@@ -38,7 +43,7 @@ class BoogleBoard {
       found = this.kamusmanual()[i];
       for (let row = 0; row < this.boggleBoardSize; row++) {
         for (var col = 0; col < this.boggleBoardSize; col++) {
-          if (this.testboard[row][col] == found[0]) {
+          if (this.boardchoice[row][col] == found[0]) {
             let word = this.checkletter(found.slice(1), found[0], found, [row, col], [[row, col]]);
             if (word == found) {
               result.push(word);
@@ -91,7 +96,7 @@ class BoogleBoard {
         col >= 0 && col < this.boggleBoardSize &&
         this.checkmove([row, col], prevmove) === true) {
 
-        if (this.testboard[row][col] == word[0]) {
+        if (this.boardchoice[row][col] == word[0]) {
           prevmove.push([row,col]);
 
           results = this.checkletter(word.slice(1), letter + word[0], found, [row,col], prevmove);
@@ -119,7 +124,7 @@ class BoogleBoard {
 }
 
 let test= new BoogleBoard(4);
-console.log(test.testboard);
+console.log(test.boardchoice);
 test.solve();
 //console.log(test.checkmove([0,0],[[0,0]]))
 

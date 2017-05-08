@@ -1,0 +1,30 @@
+y 0 & y3
+
+pilihan y0 ke y+1 atau y tetap
+pilihan y3 ke y-1 atau y tetap
+else y-1 y y+1
+
+x 0 & x 3
+pilihan x0 ke x+1 atau x
+pilihan x3 ke x-1 atau x
+else x-1 x x+1
+
+jika tetap harus berubah salah satu x atau y
+
+kapan end ?
+ketika 16 baris sudah ditelusuri
+
+
+
+if (y === 0) randomWalk({x:pos.x,y:y+1},arr,0);
+else if (y === 3) randomWalk({x:pos.x,y:y-1},arr,0);
+
+// switch(pos.x){
+//   case 0 : randomWalk({x:x+1,y:y},arr,0); break;
+//   case 3 : randomWalk({x:x-1,y:y},arr,0); break;
+//   default : {
+//     randomWalk({x:x+1,y:y},arr,0);
+//     randomWalk({x:x-1,y:y},arr,0);
+//     break;
+//   }
+// }

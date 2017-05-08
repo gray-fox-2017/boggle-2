@@ -1,10 +1,12 @@
 "use strict"
-let words = ["TEST", "WORD", "HOPE", "TRUE", "TOP", "HOST", "DED", "TROOPER", "IT"];
+const {words} = require('./data.js')
+// let words = ["TEST", "WORD", "HOPE", "TRUE", "TOP", "HOST", "DED", "TROOPER", "IT"];
 
 class Boggle {
   constructor() {
     this.dict = words;
-    this.board = this.shake(4);
+    // console.log(words)
+    this.board = this.shake(7);
     this.exampleBoard =
     [['T', 'E', 'S', 'T'],
      ['W', 'O', 'R', 'D'],
@@ -21,11 +23,12 @@ class Boggle {
         board[i][j] = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
       }
     }
+    console.log(board);
     return board;
   }
 
   solve() {
-    let puzzle = this.exampleBoard;
+    let puzzle = this.board;
     let solved = [];
     for(let i = 0; i < this.dict.length; i++) {
       let intact = this.dict[i];
@@ -93,5 +96,5 @@ class Boggle {
 
 let boggle = new Boggle();
 
-console.log(boggle.exampleBoard);
+// console.log(boggle.exampleBoard);
 boggle.solve();
